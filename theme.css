@@ -2,9 +2,9 @@
   --default-interface-font: 'Avenir Next', 'Segoe UI', sans-serif;
   --default-text-font: 'Avenir Next', 'Segoe UI', sans-serif;
   --default-mono-font: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
-  --radius-sm: 3px;
-  --radius: 5px;
-  --radius-lg: 8px;
+  --radius-sm: 0px;
+  --radius: 2px;
+  --radius-lg: 3px;
   --jarvis-glass-panel-opacity: 80%;
   --jarvis-glass-footer-opacity: 76%;
   --jarvis-glass-overlay-opacity: 94%;
@@ -24,11 +24,11 @@
   --rail-active-bg: var(--accent-tint-bg);
   --rail-active-icon: var(--accent-color);
   --rail-border: var(--border-light);
-  --rail-radius: 3px;
+  --rail-radius: 0px;
   --rail-gap: 4px;
   --sidebar-bg: color-mix(in srgb, var(--container-color) var(--jarvis-glass-panel-opacity), transparent);
   --sidebar-header-bg: var(--tab-bar-bg);
-  --sidebar-header-text: var(--title-color);
+  --sidebar-header-text: var(--accent-color);
   --sidebar-text: var(--text-secondary);
   --sidebar-hover-bg: var(--hover-bg);
   --sidebar-active-bg: var(--accent-tint-bg);
@@ -48,7 +48,7 @@
   --tab-active-bg: var(--pane-bg);
   --tab-text: var(--text-secondary);
   --tab-hover-text: var(--title-color);
-  --tab-active-text: var(--title-color);
+  --tab-active-text: var(--accent-color);
   --tab-border: var(--border-light);
   --tab-active-border: var(--accent-color);
   --tab-outline-width: 1px;
@@ -61,7 +61,7 @@
   --markdown-size: var(--text-font-size);
   --markdown-line-height: 1.7;
   --markdown-paragraph-spacing: 1.05em;
-  --markdown-heading-font: var(--body-font);
+  --markdown-heading-font: 'Avenir Next', 'Segoe UI', sans-serif;
   --markdown-heading-spacing: 1.5em;
   --markdown-link: var(--accent-color);
   --markdown-internal-link: var(--accent-color);
@@ -112,9 +112,9 @@
   --launcher-icon: var(--rail-icon);
   --launcher-hover-bg: var(--rail-hover-bg);
   --launcher-active-bg: var(--rail-active-bg);
-  --custom-tab-corner-top: 4px;
-  --custom-tab-corner-fillet: 3px;
-  --custom-tab-corner-chip: 3px;
+  --custom-tab-corner-top: 2px;
+  --custom-tab-corner-fillet: 0px;
+  --custom-tab-corner-chip: 0px;
   --statusbar-hover-bg: var(--hover-bg);
   --statusbar-hover-text: var(--title-color);
   --statusbar-gap: 8px;
@@ -122,14 +122,14 @@
   --control-text: var(--title-color);
   --control-border: var(--border-medium);
   --control-focus: var(--accent-color);
-  --control-radius: var(--radius-sm);
+  --control-radius: 2px;
   --menu-bg: color-mix(in srgb, var(--container-color) var(--jarvis-glass-overlay-opacity), transparent);
   --menu-text: var(--text-color);
-  --menu-border: var(--border-medium);
+  --menu-border: color-mix(in srgb, var(--accent-color) 45%, transparent);
   --menu-hover-bg: var(--hover-bg);
   --modal-bg: color-mix(in srgb, var(--pane-bg) var(--jarvis-glass-overlay-opacity), transparent);
   --modal-text: var(--text-color);
-  --modal-border: var(--border-medium);
+  --modal-border: var(--menu-border);
   --scrollbar-color: var(--border-medium);
   --scrollbar-hover-color: var(--text-secondary);
   --selection-bg: rgba(var(--selection-color), 0.28);
@@ -168,12 +168,12 @@
   --markdown-callout-question: var(--accent-color);
   --markdown-callout-example: var(--syntax-function);
   --markdown-callout-padding: 14px;
-  --markdown-callout-radius: var(--radius);
+  --markdown-callout-radius: 2px;
   --markdown-inline-code-border: transparent;
   --markdown-inline-code-padding: 4px;
   --markdown-inline-code-radius: var(--radius-sm);
   --markdown-code-padding: 14px;
-  --markdown-code-radius: var(--radius);
+  --markdown-code-radius: 2px;
   --markdown-table-text: var(--text-color);
   --markdown-table-padding: 10px;
   --markdown-divider: var(--border-medium);
@@ -198,31 +198,39 @@
   --markdown-h4-spacing: var(--markdown-heading-spacing);
   --markdown-h5-spacing: var(--markdown-heading-spacing);
   --markdown-h6-spacing: var(--markdown-heading-spacing);
+  --switch-track-off: color-mix(in srgb, var(--accent-color) 15%, var(--container-color));
+  --switch-track-on: var(--accent-color);
+  --switch-track-radius: 2px;
+  --switch-track-shadow: inset 0 0 0 1px var(--accent-color);
+  --switch-thumb-bg: var(--pane-bg);
+  --switch-thumb-radius: 1px;
+  --switch-thumb-shadow: inset 0 0 0 1px var(--accent-color);
+  --switch-thumb-decoration: linear-gradient(90deg, transparent 40%, var(--accent-color) 40% 60%, transparent 60%);
 }
 
 :root:where([data-design-theme='jarvis'][data-theme='dark']) {
-  --container-color-alt: #06131b;
-  --pane-bg: #06131b;
-  --container-color: #071e28;
-  --surface-color: #071e28;
-  --surface-color-alt: #06131b;
-  --body-color: #0a2934;
-  --container-color-light: #0a2934;
+  --container-color-alt: #030e18;
+  --pane-bg: #030e18;
+  --container-color: #071e2b;
+  --surface-color: #071e2b;
+  --surface-color-alt: #030e18;
+  --body-color: #0b2d40;
+  --container-color-light: #0b2d40;
   --container-color-alt-transparent: color-mix(in srgb, #06131b 88%, transparent);
-  --title-color: #d7faff;
-  --text-color: #c4e4eb;
-  --text-secondary: #8eafb9;
-  --text-tertiary: #7ca3af;
+  --title-color: #dbfbff;
+  --text-color: #b7dce5;
+  --text-secondary: #80aab8;
+  --text-tertiary: #80aab8;
   --textColorRGBA: color-mix(in srgb, #c4e4eb 40%, transparent);
-  --border-light: #1c5362;
-  --border-medium: #2d7787;
-  --hover-bg: #12333f;
-  --accent-color: #20e4ee;
-  --accent-contrast: #03292d;
+  --border-light: color-mix(in srgb, #dbfbff 12%, transparent);
+  --border-medium: color-mix(in srgb, #dbfbff 22%, transparent);
+  --hover-bg: color-mix(in srgb, #38e8f5 9%, transparent);
+  --accent-color: #38e8f5;
+  --accent-contrast: #012631;
   --selection-color: 32, 228, 238;
-  --accent-tint-bg: #104a55;
-  --accent-tint-text: #96f8ff;
-  --accent-soft-bg: color-mix(in srgb, #20e4ee 7%, transparent);
+  --accent-tint-bg: color-mix(in srgb, #38e8f5 15%, transparent);
+  --accent-tint-text: #38e8f5;
+  --accent-soft-bg: color-mix(in srgb, #38e8f5 6%, transparent);
   --dropzone-bg: color-mix(in srgb, #20e4ee 14%, transparent);
   --info-color: #20e4ee;
   --info-color-bg: color-mix(in srgb, #20e4ee 12%, transparent);
@@ -259,28 +267,28 @@
   --jarvis-glass-glow-strength: 2%;
   --jarvis-glass-edge-strength: 10%;
   --jarvis-glass-glow-radius: 12px;
-  --container-color-alt: #f4fcfd;
-  --pane-bg: #f4fcfd;
-  --container-color: #e6f3f6;
-  --surface-color: #e6f3f6;
-  --surface-color-alt: #f4fcfd;
-  --body-color: #d7edf2;
-  --container-color-light: #d7edf2;
+  --container-color-alt: #f5fdff;
+  --pane-bg: #f5fdff;
+  --container-color: #e0f3f7;
+  --surface-color: #e0f3f7;
+  --surface-color-alt: #f5fdff;
+  --body-color: #c7e8f0;
+  --container-color-light: #c7e8f0;
   --container-color-alt-transparent: color-mix(in srgb, #f4fcfd 88%, transparent);
-  --title-color: #0b3543;
-  --text-color: #244f5e;
-  --text-secondary: #3e6c7b;
-  --text-tertiary: #567680;
+  --title-color: #083947;
+  --text-color: #214e5a;
+  --text-secondary: #487582;
+  --text-tertiary: #487582;
   --textColorRGBA: color-mix(in srgb, #244f5e 40%, transparent);
-  --border-light: #9bbfc9;
-  --border-medium: #719ead;
-  --hover-bg: #d9eef2;
-  --accent-color: #006b78;
+  --border-light: color-mix(in srgb, #083947 12%, transparent);
+  --border-medium: color-mix(in srgb, #083947 22%, transparent);
+  --hover-bg: color-mix(in srgb, #006d80 9%, transparent);
+  --accent-color: #006d80;
   --accent-contrast: #ffffff;
   --selection-color: 0, 107, 120;
-  --accent-tint-bg: #b7e4eb;
-  --accent-tint-text: #045866;
-  --accent-soft-bg: color-mix(in srgb, #006b78 6%, transparent);
+  --accent-tint-bg: color-mix(in srgb, #006d80 15%, transparent);
+  --accent-tint-text: #006d80;
+  --accent-soft-bg: color-mix(in srgb, #006d80 6%, transparent);
   --dropzone-bg: color-mix(in srgb, #006b78 14%, transparent);
   --info-color: #006b78;
   --info-color-bg: color-mix(in srgb, #006b78 12%, transparent);
@@ -320,3 +328,13 @@
 :where([data-design-theme='jarvis']) :is(.icon-rail-btn.active, .inspector-tab.active) {
   filter: drop-shadow(0 0 var(--jarvis-glass-glow-radius) var(--jarvis-glass-glow-color));
 }
+
+:where([data-design-theme='jarvis']) .sidebar { background-image: linear-gradient(color-mix(in srgb, var(--accent-color) 4%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--accent-color) 4%, transparent) 1px, transparent 1px); background-size: 24px 24px; }
+
+:where([data-design-theme='jarvis']) .panel-title { font-family: var(--mono-font); letter-spacing: .15em; font-weight: 500; }
+
+:where([data-design-theme='jarvis']) .tab.active { box-shadow: inset 0 2px 0 var(--accent-color), inset 1px 0 0 var(--border-medium), inset -1px 0 0 var(--border-medium), inset var(--tab-outline-width) 0 0 var(--tab-active-border), inset calc(-1 * var(--tab-outline-width)) 0 0 var(--tab-active-border), inset 0 var(--tab-outline-width) 0 var(--tab-active-border); }
+
+:where([data-design-theme='jarvis']) :is(.panel-header, .status-bar) { background-image: linear-gradient(90deg, var(--accent-soft-bg), transparent); }
+
+:where([data-design-theme='jarvis']) :is(.ctx-menu, .ctx-popover, .modal) { box-shadow: 0 0 0 1px var(--accent-soft-bg), 0 12px 40px rgba(0, 20, 35, .3); }
