@@ -1,0 +1,12 @@
+{
+  "id": "jarvis",
+  "name": "Jarvis",
+  "version": "2.0.0",
+  "description": "A cyan command center: luminous grids, angular controls, instrument-panel tabs, and translucent icy or midnight surfaces.",
+  "author": [
+    "nausicaa"
+  ],
+  "authorUrl": [
+    "https://github.com/nausicaa-io"
+  ]
+}
