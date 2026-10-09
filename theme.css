@@ -1,4 +1,17 @@
 :root:where([data-design-theme='jarvis']) {
+  --content-text: var(--title-color);
+  --content-muted: color-mix(in srgb, var(--text-secondary) 60%, var(--title-color));
+  --surface-raised: var(--container-color-light);
+  --input-elevated-bg: var(--control-bg);
+  --input-elevated-border: var(--control-border);
+  --input-elevated-placeholder: var(--content-muted);
+  --input-elevated-shadow: none;
+  --hover-bg-strong: color-mix(in srgb, var(--title-color) 14%, var(--container-color));
+  --menu-glass-bg: var(--menu-bg);
+  --menu-glass-border: var(--menu-border);
+  --menu-glass-shadow: var(--shadow-menu);
+  --button-contrast-bg: var(--title-color);
+  --button-contrast-text: var(--pane-bg);
   --default-interface-font: 'Avenir Next', 'Segoe UI', sans-serif;
   --default-text-font: 'Avenir Next', 'Segoe UI', sans-serif;
   --default-mono-font: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
@@ -123,6 +136,7 @@
   --control-border: var(--border-medium);
   --control-focus: var(--accent-color);
   --control-radius: 2px;
+  --shadow-menu: 0 0 0 1px var(--accent-soft-bg), 0 12px 40px rgba(0, 20, 35, .3);
   --menu-bg: color-mix(in srgb, var(--container-color) var(--jarvis-glass-overlay-opacity), transparent);
   --menu-text: var(--text-color);
   --menu-border: color-mix(in srgb, var(--accent-color) 45%, transparent);
@@ -337,4 +351,4 @@
 
 :where([data-design-theme='jarvis']) :is(.panel-header, .status-bar) { background-image: linear-gradient(90deg, var(--accent-soft-bg), transparent); }
 
-:where([data-design-theme='jarvis']) :is(.ctx-menu, .ctx-popover, .modal) { box-shadow: 0 0 0 1px var(--accent-soft-bg), 0 12px 40px rgba(0, 20, 35, .3); }
+:where([data-design-theme='jarvis']) :is(.ctx-menu, .ctx-popover, .modal) { box-shadow: var(--shadow-menu); }
